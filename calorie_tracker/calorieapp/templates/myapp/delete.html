@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Delete Page</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 offset-4">
+                <form method="POST">
+                    {% csrf_token %}
+                    <h3 class="mt-4">Are you sure you want to <span class="text-danger">delete</span></h3>
+                    <center>
+                        <input type="submit" value="YES" class="btn btn-danger">
+                        <a href="{% url 'index' %}" class="btn btn-primary" style="text-decoration: none;">NO</a>
+                    </center>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
